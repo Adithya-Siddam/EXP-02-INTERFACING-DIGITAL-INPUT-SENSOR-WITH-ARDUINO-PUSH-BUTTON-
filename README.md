@@ -91,7 +91,7 @@ void setup()
 
 Output of the simulation :
 
-![My image](img11123.png)
+![My image](IMG11123.png)
 
 
 Result:
