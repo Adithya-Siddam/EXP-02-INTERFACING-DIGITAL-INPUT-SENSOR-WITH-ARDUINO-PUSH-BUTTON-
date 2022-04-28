@@ -1,7 +1,8 @@
 # EXP-02-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON
 
-AIM:  To interface a digital input (push button) and blink and LED upon activation.
-COMPONENTS REQUIRED:
+AIM:  
+     To interface a digital input (push button) and blink and LED upon activation.
+##COMPONENTS REQUIRED:
 1.	1 KΩ Resistor 
 2.	Arduino Uno 
 3.	Bread board 
@@ -25,7 +26,7 @@ Flash Memory	16 KB (ATmega168) or 32 KB (ATmega328) of which 2 KB used by boot l
 SRAM	1 KB (ATmega168) or 2 KB (ATmega328)
 EEPROM	512 bytes (ATmega168) or 1 KB (ATmega328)
 Clock Speed	16 MHz
-PIN DIAGRAM FOR ATMEGA 328
+##PIN DIAGRAM FOR ATMEGA 328
  
 ![image](https://user-images.githubusercontent.com/36288975/163530394-115baee4-7ed1-49fe-9cce-d7b625e11e85.png)
 
@@ -66,16 +67,29 @@ FIGURE -03
 
 
 
-PROGRAM 
+PROGRAM:
+~~~
+int buttonState = 0;
+void setup()
+{
+  pinMode(2, OUTPUT);
+  pinMode(13, INPUT);
+}
+  
+  void loop()
+{
+  buttonState = digitalRead(13);
+  if (buttonState == HIGH){
+    digitalWrite(2, HIGH);
+  } else {
+    digitalWrite(2, LOW);
+  }
+    delay(10);
+}
+~~~
  
- 
- 
- 
- 
-
-
 
 Output of the simulation :
 
-[My image](username.github.com/repository/img/image.jpg)
+[My image](/image/img123.png)
 
