@@ -91,7 +91,9 @@ void setup()
 
 Output of the simulation :
 
-[My image](/img123.png)
+![My image](img123.png)
+
+
 Result:
     Thus the interfaceing digital input sensor with ardunio push button is completed using thinkercad software sucessfully.
 
