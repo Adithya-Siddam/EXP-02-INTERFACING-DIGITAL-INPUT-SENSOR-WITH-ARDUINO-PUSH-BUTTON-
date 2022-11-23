@@ -67,23 +67,29 @@ Clock Speed	16 MHz
 
 ### PROGRAM:
 ~~~
-int buttonState = 0;
+// C++ code
+int ledpin=4;
+int pushbtn=2;
+int val=0;
 void setup()
 {
-  pinMode(2, OUTPUT);
-  pinMode(13, INPUT);
+  pinMode(ledpin, OUTPUT);
+  pinMode(pushbtn,INPUT);
 }
-  
-  void loop()
+
+void loop()
 {
-  buttonState = digitalRead(13);
-  if (buttonState == HIGH){
-    digitalWrite(2, HIGH);
-  } else {
-    digitalWrite(2, LOW);
+  val=digitalRead(pushbtn);
+  if(val==0)
+  {
+    digitalWrite(ledpin,HIGH);
   }
-    delay(10);
+  else
+  {
+    digitalWrite(ledpin,LOW);
+  }
 }
+ 
 ~~~
  
 
